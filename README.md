@@ -1,5 +1,7 @@
 # rust_diesel_easy_tutorial
-
+```
+cargo new --lib diesel_demo
+```
 
 ```
 podman run --rm --name diesel -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
