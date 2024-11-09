@@ -32,6 +32,19 @@ cargo install diesel_cli --no-default-features --features postgres
 ~/.cargo/bin/diesel migration generate create_posts
 ```
 
+
+migrations/.../up.sql
+```
+CREATE TABLE posts (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR NOT NULL,
+  body TEXT NOT NULL,
+  published BOOLEAN NOT NULL DEFAULT FALSE
+)
+```
+
+
+
 ```
 ~/.cargo/bin/diesel migration run --database-url postgres://postgres:postgres@localhost/diesel_demo
 ```
